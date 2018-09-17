@@ -2,6 +2,20 @@
 #
 # usage: awk -v f1=keyfield -f arrange_horizontally.awk files...
 #
+# This script groups successive lines by a key specified with f1,
+# stores them as a sequence of data, and displays the sequence
+# in the same line with the key. See the following example for
+# the behavior of this script.
+#
+# (input)
+#     A 1 X
+#     A 2 Y
+#     A 3 Z
+#     B 4 X
+#     B 5 Y
+# (output)
+#     A 1 X 2 Y 3 Z
+#     B 4 X 5 Y
 # 
 # initialize
 BEGIN{
